@@ -1,0 +1,101 @@
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.days-of-week span {
+    text-align: center;
+    padding: 5px;
+}
+
+.calendar-day {
+    padding: 10px;
+    border: 1px solid #eee;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f9f9f9;
+}
+
+.calendar-day.has-appointment {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.has-appointment:hover {
+    background-color: #0056b3;
+}
+
+#appointments-list h3 {
+    margin-top: 20px;
+}
+
+#appointments-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#appointments-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#appointments-list li:last-child {
+    border-bottom: none;
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}

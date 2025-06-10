@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+    margin: 0; /* Remove a margem padrão do body */
+    background-color: #f4f6f8; /* Um fundo cinza claro suave */
+    color: #333; /* Cor de texto padrão mais escura */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte moderna e legível */
+}
+
+.dashboard-page {
+    padding: 40px; /* Aumentei o padding para dar mais espaço */
+    flex-grow: 1; /* Permite que a página principal cresça e empurre o footer para baixo */
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px; /* Mais espaço abaixo da seção de boas-vindas */
+}
+
+.dashboard-buttons {
+    display: flex;
+    gap: 25px; /* Aumentei o gap entre os botões */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-button {
+    background-color: #5cb85c; /* Verde mais vibrante */
+    color: white;
+    border: none;
+    padding: 18px 35px; /* Aumentei um pouco o padding dos botões */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    font-size: 1.15em; /* Texto um pouco maior */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Transições mais suaves */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Mais espaço entre ícone e texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+.dashboard-button i {
+    font-size: 1.6em; /* Ícones um pouco maiores */
+    color: #fff; /* Garante que o ícone seja branco */
+}
+
+.dashboard-button:hover {
+    background-color: #4cae4c; /* Verde um pouco mais escuro no hover */
+    transform: translateY(-2px); /* Pequeno efeito de elevação ao passar o mouse */
+}
+
+.calendar-section,
+.account-settings-section,
+.medical-records-section,
+.medical-report-section {
+    margin-top: 40px; /* Mais espaço entre as seções */
+    padding: 30px; /* Aumentei o padding interno */
+    border: 1px solid #e0e0e0; /* Borda mais clara */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background-color: #fff; /* Fundo branco para as seções */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Leve sombra nas seções */
+}
+
+.calendar-container {
+    /* Estilos para o calendário (adicione seus estilos aqui) */
+}
+
+#appointments-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#appointments-list li {
+    padding: 12px 0; /* Mais padding vertical */
+    border-bottom: 1px solid #f0f0f0; /* Borda mais clara */
+}
+
+#appointments-list li:last-child {
+    border-bottom: none;
+}
+
+.account-info p {
+    margin-bottom: 15px; /* Mais espaço entre os parágrafos */
+    color: #555; /* Texto um pouco mais claro */
+}
+
+.delete-account-button {
+    background-color: #d9534f; /* Vermelho mais vivo */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Aumentei o padding */
+    border-radius: 6px; /* Bordas um pouco mais arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-account-button:hover {
+    background-color: #c9302c; /* Vermelho mais escuro no hover */
+}
+
+#medical-report-form .form-group {
+    margin-bottom: 20px; /* Mais espaço entre os grupos de formulário */
+}
+
+#medical-report-form label {
+    display: block;
+    margin-bottom: 8px; /* Mais espaço abaixo da label */
+    font-weight: bold;
+    color: #333; /* Texto da label mais escuro */
+}
+
+#medical-report-form input[type="text"],
+#medical-report-form input[type="date"],
+#medical-report-form textarea {
+    width: calc(100% - 16px); /* Ajustei o cálculo da largura */
+    padding: 10px; /* Mais padding interno */
+    border: 1px solid #ccc; /* Borda um pouco mais escura */
+    border-radius: 6px; /* Bordas mais arredondadas */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #555; /* Cor do texto de entrada */
+}
+
+#saved-reports ul {
+    list-style: none;
+    padding: 0;
+}
+
+#saved-reports li {
+    padding: 12px 0; /* Mais padding vertical */
+    border-bottom: 1px solid #f0f0f0; /* Borda mais clara */
+}
+
+#saved-reports li:last-child {
+    border-bottom: none;
+}
+
+/* Footer para fixar o texto no final da página */
+.footer {
+    background-color: #f8f9fa; /* Um fundo bem claro para o footer */
+    color: #777; /* Texto do footer mais claro */
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid #eee; /* Uma linha sutil acima do footer */
+}

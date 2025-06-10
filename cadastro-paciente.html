@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Paciente - CEUBCare</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">CEUBCare</div>
+            <nav>
+                <ul>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container registration-page">
+        <section class="card">
+            <h2>Cadastro de Tutor (Paciente)</h2>
+            <form id="cadastro-paciente-form" class="cadastro-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do Tutor:</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome do Tutor:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome-animal">Nome do Animal:</label>
+                        <input type="text" id="nome-animal" name="nome-animal" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="raca-animal">Raça do Animal:</label>
+                        <input type="text" id="raca-animal" name="raca-animal" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Endereço de e-mail:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required />
+                </div>
+                <p class="terms">
+                    Ao se registrar, você está de acordo com nossos
+                    <a href="#">termos e condições</a>, e confirma estar ciente de nossa
+                    <a href="#">política de privacidade</a>.
+                </p>
+                <button type="submit" class="primary-button">Criar Conta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 CEUBCare. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="cadastro-paciente.js"></script>
+</body>
+</html>

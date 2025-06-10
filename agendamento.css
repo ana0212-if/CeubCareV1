@@ -1,0 +1,221 @@
+/* Estilos gerais para a página de agendamento */
+.scheduling-page {
+    padding: 40px 0;
+}
+
+.scheduling-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.scheduling-header h1 {
+    color: #800080;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.selected-info {
+    background-color: #f0f0f5;
+    border-left: 5px solid #800080;
+}
+
+.selected-info p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #6a006a;
+}
+
+/* Estilos para a seção de disponibilidade de médicos */
+#disponibilidade-medicos h2 {
+    color: #6a006a;
+    margin-bottom: 20px;
+}
+
+#lista-medicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.medico-disponivel {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.medico-disponivel h4 {
+    color: #4a148c;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.medico-disponivel p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.horarios-disponiveis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.horarios-disponiveis button {
+    background-color: #800080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.horarios-disponiveis button:hover {
+    background-color: #6a006a;
+}
+
+.loading-message, .warning-message {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    padding: 15px;
+}
+
+.warning-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    border-radius: 5px;
+}
+
+/* Estilos para o formulário de agendamento */
+#formulario-agendamento h2 {
+    color: #6a006a;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.primary-button {
+    background-color: #4a148c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #311b92;
+}
+
+/* Estilos para a seção de confirmação */
+.confirmation-card {
+    text-align: center;
+}
+
+.confirmation-card h2 {
+    color: #43a047;
+    margin-bottom: 20px;
+}
+
+.verification-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.verification-input input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+.secondary-button {
+    background-color: #00897b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #00695c;
+}
+
+.validation-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #43a047;
+}
+
+/* ... outros estilos ... */
+
+#informacao-consulta-selecionada h2 {
+    color: #2e7d32; /* Tom de verde para destacar */
+    margin-bottom: 15px;
+}
+
+#informacao-consulta-selecionada p {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#informacao-consulta-selecionada strong {
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.button-group .secondary-button {
+    background-color: #bdbdbd;
+}
+
+.button-group .secondary-button:hover {
+    background-color: #9e9e9e;
+}

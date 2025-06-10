@@ -1,0 +1,105 @@
+/* Estilos gerais para a página de cadastro */
+.registration-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Ajusta a altura para ocupar a tela */
+    padding: 20px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+.registration-page .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Ajuste a largura máxima conforme necessário */
+}
+
+.registration-page h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.cadastro-form .form-row {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os campos na mesma linha */
+    margin-bottom: 20px;
+}
+
+.cadastro-form .form-group {
+    flex: 1; /* Faz os campos ocuparem o espaço disponível na linha */
+    margin-bottom: 20px;
+}
+
+.cadastro-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.cadastro-form .form-group input[type="text"],
+.cadastro-form .form-group input[type="email"],
+.cadastro-form .form-group input[type="password"],
+.cadastro-form .form-group select {
+    width: calc(100% - 12px); /* Ajuste para o padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+}
+
+.cadastro-form .form-group select {
+    appearance: none; /* Remove a aparência padrão do select */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1.2em;
+    cursor: pointer;
+}
+
+.cadastro-form .form-group input[type="text"]:focus,
+.cadastro-form .form-group input[type="email"]:focus,
+.cadastro-form .form-group input[type="password"]:focus,
+.cadastro-form .form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.cadastro-form .terms {
+    color: #777;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.cadastro-form .terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cadastro-form .terms a:hover {
+    text-decoration: underline;
+}
+
+.cadastro-form .primary-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-form .primary-button:hover {
+    background-color: #0056b3;
+}

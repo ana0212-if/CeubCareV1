@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CEUBCare</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">CEUBCare</div>
+            <nav>
+                <ul>
+                    <li><a href="criar-perfil.html">Criei perfil gratuito</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Agende agora sua consulta</h1>
+            <p>Mais de 500 mil especialistas de saúde estão prontos para te ajudar</p>
+            <div class="search-bar">
+                <select id="especialidade">
+                    <option value="" disabled selected>Selecione a especialidade</option>
+                    <option value="clinico-geral">Clínico Geral</option>
+                    <option value="dermatologia-animal">Dermatologia Animal</option>
+                    <option value="cardiologia-veterinaria">Cardiologia Veterinária</option>
+                    <option value="ortopedia-animal">Ortopedia Animal</option>
+                    <option value="oftalmologia-veterinaria">Oftalmologia Veterinária</option>
+                    <option value="odontologia-animal">Odontologia Animal</option>
+                    <option value="endocrinologia-animal">Endocrinologia Animal</option>
+                    <option value="neurologia-veterinaria">Neurologia Veterinária</option>
+                    <option value="outra">Outra</option>
+                </select>
+
+                <select id="campus">
+                    <option value="" disabled selected>Selecione o campus</option>
+                    <option value="asa-norte">Asa Norte</option>
+                    <option value="taguatinga">Taguatinga</option>
+                </select>
+
+                <button onclick="redirecionarAgendamento()">Pesquisar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container features-content">
+            <div class="feature-item">
+                <h3>Encontre especialistas</h3>
+                <p>Busque por especialistas de saúde em sua região. Filtre por plano de saúde, horários e conveniência.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Marque consultas</h3>
+                <p>Escolha o profissional, dia e horário que desejar, agendando sua consulta em poucos minutos. Sem complicação.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Avalie o serviço</h3>
+                <p>Após a consulta você poderá deixar sua opinião sobre o serviço. Sua avaliação é muito importante para nós.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container blog-content">
+            <h2>Blog para pacientes</h2>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <blockquote>"A terrific piece of praise"</blockquote>
+                    <div class="author">
+                        <div class="author-image"></div>
+                        <div class="author-info">
+                            <p class="name">Nome</p>
+                            <p class="description">Descrição</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <blockquote>"A fantastic bit of feedback"</blockquote>
+                    <div class="author">
+                        <div class="author-image"></div>
+                        <div class="author-info">
+                            <p class="name">Nome</p>
+                            <p class="description">Descrição</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <blockquote>"A genuinely glowing review"</blockquote>
+                    <div class="author">
+                        <div class="author-image"></div>
+                        <div class="author-info">
+                            <p class="name">Nome</p>
+                            <p class="description">Descrição</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 CEUBCare. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirecionarAgendamento() {
+            const especialidadeSelecionada = document.getElementById('especialidade').value;
+            const campusSelecionado = document.getElementById('campus').value;
+
+            if (!especialidadeSelecionada) {
+                alert('Por favor, selecione a especialidade');
+                return;
+            }
+
+            localStorage.setItem('especialidadeTemp', especialidadeSelecionada);
+            localStorage.setItem('campusTemp', campusSelecionado || '');
+
+            localStorage.setItem('agendamentoPendente', 'true');
+
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

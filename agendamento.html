@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - CEUBCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">CEUBCare</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Criei perfil gratuito</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container scheduling-page">
+        <section class="scheduling-header">
+            <h1>Agendamento de Consulta</h1>
+            <div class="selected-info card">
+                <p>Você selecionou a especialidade: <span class="highlight" id="especialidade-selecionada"></span> no campus: <span class="highlight" id="campus-selecionado"></span></p>
+            </div>
+        </section>
+
+        <section id="disponibilidade-medicos" class="card">
+            <h2>Disponibilidade de Médicos</h2>
+            <div id="lista-medicos">
+                <p class="loading-message">Carregando médicos disponíveis...</p>
+            </div>
+            <div id="mensagem-nenhum-medico" style="display: none;">
+                <p class="warning-message">Nenhum médico encontrado para a especialidade e campus selecionados. Mostrando outras opções...</p>
+            </div>
+        </section>
+
+        <section id="informacao-consulta-selecionada" class="card" style="display: none;">
+            <h2>Consulta Selecionada</h2>
+            <p><strong>Médico(a):</strong> <span id="medico-selecionado"></span></p>
+            <p><strong>Horário:</strong> <span id="horario-selecionado-info"></span></p>
+            <p><strong>Campus:</strong> <span id="campus-selecionado-info"></span></p>
+        </section>
+
+        <section id="formulario-agendamento" class="card" style="display: none;">
+            <h2>Informações para Agendamento</h2>
+            <form id="form-agendamento">
+                <div class="form-group">
+                    <label for="nome-animal">Nome do Animal:</label>
+                    <input type="text" id="nome-animal" name="nome-animal" required>
+                </div>
+                <div class="form-group">
+                    <label for="nome-tutor">Nome do Tutor:</label>
+                    <input type="text" id="nome-tutor" name="nome-tutor" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-tutor">Email do Tutor:</label>
+                    <input type="email" id="email-tutor" name="email-tutor" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario-consulta">Horário da Consulta:</label>
+                    <input type="text" id="horario-consulta" name="horario-consulta" readonly>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="primary-button" onclick="confirmarAgendamento()">Agendar Consulta</button>
+                    <button type="button" class="secondary-button" onclick="voltarParaDisponibilidade()">Voltar</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="mensagem-confirmacao" class="card confirmation-card" style="display: none;">
+            <h2>Confirmação de Agendamento</h2>
+            <p>Um código de verificação foi enviado para o seu e-mail. Por favor, insira o código abaixo para confirmar o agendamento.</p>
+            <div class="verification-input">
+                <input type="text" id="codigo-verificacao" placeholder="Código de Verificação">
+                <button type="button" class="secondary-button" onclick="validarAgendamento()">Validar Código</button>
+            </div>
+            <p id="mensagem-validacao" class="validation-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 CEUBCare. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>

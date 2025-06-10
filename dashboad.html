@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo(a) ao CEUBCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="calendar.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">CEUBCare</div>
+            <nav>
+                <ul>
+                    <li><a href="logout.html">Sair</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container dashboard-page">
+        <section class="welcome-section">
+            <h1>Bem-vindo(a) ao CEUBCare!</h1>
+            <div class="dashboard-buttons">
+                <button class="dashboard-button" id="calendar-button">
+                    <i class="far fa-calendar-alt"></i>
+                    Calendário
+                </button>
+                <button class="dashboard-button" id="account-settings-button">
+                    <i class="fas fa-user-cog"></i>
+                    Configurações da Conta
+                </button>
+                <button class="dashboard-button" id="medical-records-button">
+                    <i class="fas fa-file-medical-alt"></i>
+                    Laudo Médico
+                </button>
+                <button class="dashboard-button" id="medical-report-button">
+                    <i class="fas fa-file-medical"></i>
+                    Relatório Médico
+                </button>
+            </div>
+        </section>
+
+        <section class="calendar-section" id="calendar-section" style="display: none;">
+            <h2>Seu Calendário</h2>
+            <div id="calendar-container">
+                </div>
+            <div id="appointments-list">
+                <h3>Suas Consultas Marcadas:</h3>
+                <ul id="appointments">
+                    </ul>
+            </div>
+        </section>
+
+        <section class="account-settings-section" id="account-settings-section" style="display: none;">
+            <h2>Configurações da Conta</h2>
+            <div class="account-info">
+                <p><strong>Nome:</strong> <span id="account-name"></span></p>
+                <p><strong>Sobrenome:</strong> <span id="account-lastname"></span></p>
+                <p><strong>Cadastrado em:</strong> <span id="account-created-at"></span></p>
+                <p><strong>E-mail:</strong> <span id="account-email"></span></p>
+            </div>
+            <button class="delete-account-button">Deletar Conta</button>
+        </section>
+
+        <section class="medical-records-section" id="medical-records-section" style="display: none;">
+            <h2>Laudo Médico e Quadro Clínico</h2>
+            <p>Esta seção estará disponível apenas no software do médico.</p>
+            </section>
+
+        <section class="medical-report-section" id="medical-report-section" style="display: none;">
+            <h2>Relatório Médico</h2>
+            <form id="medical-report-form">
+                <div class="form-group">
+                    <label for="patient-name">Nome do Paciente:</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="report-date">Data do Relatório:</label>
+                    <input type="date" id="report-date" name="report-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="diagnosis">Diagnóstico:</label>
+                    <textarea id="diagnosis" name="diagnosis" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="treatment">Tratamento:</label>
+                    <textarea id="treatment" name="treatment" rows="5"></textarea>
+                </div>
+                <button type="submit" class="primary-button">Salvar Relatório</button>
+            </form>
+            <div id="saved-reports">
+                <h3>Relatórios Salvos:</h3>
+                <ul id="reports-list">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 CEUBCare. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+    <script src="calendar.js"></script> </body>
+</html>

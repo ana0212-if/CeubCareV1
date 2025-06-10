@@ -1,0 +1,107 @@
+body {
+    background-color: #800080; /* Cor roxa de fundo */
+    color: #fff; /* Cor do texto principal */
+    font-family: sans-serif; /* Fonte padrão */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav li:first-child {
+    margin-left: 0;
+    color: #ddd;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-profile-page {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de blur no fundo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-button {
+    background-color: rgba(255, 255, 255, 0.8); /* Botões brancos */
+    color: #333; /* Texto preto nos botões */
+    border: none;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.profile-button:hover {
+    background-color: #fff; /* Branco sólido ao passar o mouse */
+}
+
+.paciente-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-text {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ddd;
+}
